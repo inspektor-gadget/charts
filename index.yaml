@@ -2,6 +2,31 @@ apiVersion: v1
 entries:
   gadget:
   - apiVersion: v2
+    appVersion: v0.24.0
+    created: "2024-01-08T11:01:57.23818921Z"
+    description: Gadgets for debugging and introspecting apps
+    digest: 6b5b6b822687c075cdc11352e9585832a8e1a145f385d00cd2051763b6489e57
+    home: https://www.inspektor-gadget.io
+    icon: https://www.inspektor-gadget.io/media/brand-logo.svg
+    keywords:
+    - Inspektor Gadget
+    - BPF
+    - eBPF
+    - Kubernetes
+    - Networking
+    - Debugging
+    - Observability
+    - Troubleshooting
+    maintainers:
+    - name: Inspektor Gadget Team
+      url: https://www.inspektor-gadget.io
+    name: gadget
+    sources:
+    - https://github.com/inspektor-gadget/inspektor-gadget
+    urls:
+    - https://github.com/inspektor-gadget/inspektor-gadget/releases/download/v0.24.0/gadget-0.24.0.tgz
+    version: 0.24.0
+  - apiVersion: v2
     appVersion: v0.23.1
     created: "2024-01-02T04:01:43.410299608Z"
     description: Gadgets for debugging and introspecting apps
@@ -201,4 +226,4 @@ entries:
     urls:
     - https://github.com/inspektor-gadget/inspektor-gadget/releases/download/v0.18.0/gadget-0.18.0.tgz
     version: 0.18.0
-generated: "2024-01-02T04:01:43.409719754Z"
+generated: "2024-01-08T11:01:57.237564367Z"
