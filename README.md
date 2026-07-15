@@ -21,6 +21,17 @@ $ helm repo add gadget https://inspektor-gadget.github.io/charts
 $ helm install gadget gadget/gadget --namespace=gadget --create-namespace
 ```
 
+For the full installation guide, see the
+[Inspektor Gadget documentation](https://inspektor-gadget.io/docs/latest/reference/install-kubernetes#installation-with-the-helm-chart).
+
+## Chart Values
+
+The list of configurable values, their defaults, and descriptions are published
+alongside the chart itself:
+
+* [Chart page on Artifact Hub](https://artifacthub.io/packages/helm/gadget/gadget)
+* Chart source (template and `values.yaml`) in the [inspektor-gadget/inspektor-gadget repository](https://github.com/inspektor-gadget/inspektor-gadget/tree/main/charts/gadget)
+
 ## Maintainers
 
 | Name |  Url |
@@ -34,22 +45,5 @@ $ helm install gadget gadget/gadget --namespace=gadget --create-namespace
 ## Getting Help
 
 In case you encounter any problems while using Inspektor Gadget, feel free to
-open an issue in the [Inspektor Gadget GitHub repository](https://github.com/inspektor-gadget/inspektor-gadget) or reach out to use at
+open an issue in the [Inspektor Gadget GitHub repository](https://github.com/inspektor-gadget/inspektor-gadget) or reach out to us at
 [Inspektor Gadget Slack channel](https://kubernetes.slack.com/messages/inspektor-gadget/).
-
-## Values
-
-| Key | Type | Default | Description |
-|-----|------|---------|-------------|
-| config.hookMode | string | `"auto"` | How to get containers start/stop notifications (auto, crio, podinformer, nri, fanotify, fanotify+ebpf") |
-| config.fallbackPodInformer | bool | `true` | Whether to use the fallback pod informer |
-| config.containerdSocketPath | string | `"/run/containerd/containerd.sock"` | Containerd CRI Unix socket path |
-| config.crioSocketPath | string | `"/run/crio/crio.sock"` | CRI-O CRI Unix socket path |
-| config.dockerSocketPath | string | `"/run/docker.sock"` | Docker Engine API Unix socket path |
-| config.experimental | bool | `false` | Enable experimental features |
-| image.repository | string | `"ghcr.io/inspektor-gadget/inspektor-gadget"` | Container repository for the container image |
-| image.pullPolicy | string | `"Always"` | Pull policy for the container image |
-| image.tag | string | `""` | Tag for the container image |
-| nodeSelector | object | `{"kubernetes.io/os":"linux"}` | Node selector used by `gadget` container |
-| affinity | object | `{}` | Affinity used by `gadget` container |
-| tolerations | list | `[{"effect":"NoSchedule","operator":"Exists"},{"effect":"NoExecute","operator":"Exists"}]` | Tolerations used by `gadget` container |
